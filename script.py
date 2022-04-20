@@ -1,5 +1,6 @@
 import random
 import webbrowser
+import pyautogui
 import time
 import csv 
 
@@ -23,7 +24,8 @@ while True:
     # Create a search term with random length and random words from the dictionary
     
     webbrowser.open_new_tab(url)
+    time.sleep(2)
+    pyautogui.hotkey('command', 'w')
     sleep_time = random.uniform(3, 10)
     time.sleep(sleep_time)
-
-    # Open the search term in a new tab and wait for a random amount of time
+    # Open the search term in a new tab, close it, and wait for a random amount of time
